@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var LwrCase = [
+var lowerCaseArray = [
   "a",
   "b",
   "c",
@@ -56,8 +56,8 @@ var uppercaseArray = [
   "Y",
   "Z",
 ];
-var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var SpclCha = [
+var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var specialcharacterArray = [
   "`",
   "~",
   "!",
@@ -117,12 +117,20 @@ function generatePassword() {
   var guaranteedChar = [];
 
   if (options.charType) {
-    possibleChar = possibleChar.concat(SpclCha);
-    guaranteedChar.push(randomGen(SpclCha));
+    possibleChar = possibleChar.concat(specialcharacterArray);
+    guaranteedChar.push(randomGen(specialcharacterArray));
   }
   if (options.upper) {
     possibleChar = possibleChar.concat(uppercaseArray);
     guaranteedChar.push(randomGen(uppercaseArray));
+  }
+  if (options.lower) {
+    possibleChar = possibleChar.concat(lowerCaseArray);
+    guaranteedChar.push(randomGen(lowerCaseArray));
+  }
+  if (options.numbers) {
+    possibleChar = possibleChar.concat(numbersArray);
+    guaranteedChar.push(randomGen(numbersArray))
   }
 
   for (var i = 0; i < options.length; i++) {
@@ -141,7 +149,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
