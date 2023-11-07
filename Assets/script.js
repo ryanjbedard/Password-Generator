@@ -56,7 +56,7 @@ var uppercaseArray = [
   "Y",
   "Z",
 ];
-var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialcharacterArray = [
   "`",
   "~",
@@ -130,7 +130,7 @@ function generatePassword() {
   }
   if (options.numbers) {
     possibleChar = possibleChar.concat(numbersArray);
-    guaranteedChar.push(randomGen(numbersArray))
+    guaranteedChar.push(randomGen(numbersArray));
   }
 
   for (var i = 0; i < options.length; i++) {
