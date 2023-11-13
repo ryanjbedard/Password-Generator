@@ -14,7 +14,8 @@ N/A
 
 Follow the URL and enter the requested information from the prompts. After finishing the last prompt and clicking the 'Generate Password' button. A password should generate in the text field given the criteria you entered via the prompts.
 
-![alt text](./Assets/Images/Screenshot 2023-11-06 182918.png?raw=true)
+![alt text](./Assets/Images/Screenshot%202023-11-06%20182918.png)
+https://ryanjbedard.github.io/Password-Generator/
 
 ## License
 

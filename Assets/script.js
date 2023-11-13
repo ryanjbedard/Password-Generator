@@ -89,6 +89,9 @@ function passwordOptions() {
   var passwordLength = parseInt(
     prompt("How many characters would you like to have?")
   );
+  if (passwordLength > 128 || passwordLength < 8 ){
+    alert("Password must be between 8 and 128 characters");
+  return false;};
   var characterType = confirm("Would you like special characters?");
   var upperCase = confirm("Would you like to use upper case letters?");
   var lowerCase = confirm("Would you like to use lower case letters?");
@@ -139,7 +142,7 @@ function generatePassword() {
   }
 
   for (var i = 0; i < guaranteedChar.length; i++) {
-    result[i] = guaranteedChar;
+    result[i] = guaranteedChar[i];
   }
   return result.join("");
 }
